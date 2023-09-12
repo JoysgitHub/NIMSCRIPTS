@@ -65,7 +65,9 @@ for port in startport..endport:
 
 echo "-------------------------"
 echo "Scanned ", total, " ports"
-if open > 0:
+if open == 1:
+    echo open, " port open"
+elif open > 0:
     echo "Total ", open ," ports open"
 else:
     echo "Total 0 ports, either host is down\n or could be blocking"
